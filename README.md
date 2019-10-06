@@ -3,7 +3,7 @@ Utility library for working with async/await instead of streams when executing c
 
 # Usage
 ```
-const exec = require('async-exec')
+const exec = require('@wickning1/async-exec')
 async function main() {
   const { output, stdout, stderr } = await exec('ffmpeg', ['-i', 'inputpath'],
     ({ output, stdout, stderr}) => {

@@ -2,18 +2,18 @@ const childprocess = require('child_process')
 module.exports = (command, argumentarray, progress) => {
   return new Promise((resolve, reject) => {
     const final = { output: '', stdout: '', stderr: '' }
-    const child = childprocess.spawn(command, argumentarray)
+    const child = childprocess.spawn(command, argumentarray || [])
     child.stdout.on('data', chunk => {
       const line = chunk.toString('utf8')
       final.output += line
       final.stdout += line
-      progress({ output: line, stdout: line })
+      if (progress) progress({ output: line, stdout: line })
     })
     child.stderr.on('data', chunk => {
       const line = chunk.toString('utf8')
       final.output += line
       final.stderr += line
-      progress({ output: line, stderr: line })
+      if (progress) progress({ output: line, stderr: line })
     })
     let error
     child.on('error', err => {

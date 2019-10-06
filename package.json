@@ -1,6 +1,6 @@
 {
   "name": "@wickning1/async-exec",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility library for working with async/await instead of streams when executing commands with child-process",
   "main": "index.js",
   "scripts": {

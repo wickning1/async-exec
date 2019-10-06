@@ -1,0 +1,25 @@
+{
+  "name": "async-exec",
+  "version": "1.0.0",
+  "description": "Utility library for working with async/await instead of streams when executing commands with child-process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wickning1/async-exec.git"
+  },
+  "keywords": [
+    "child_process",
+    "exec",
+    "spawn",
+    "command"
+  ],
+  "author": "Nick Wing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wickning1/async-exec/issues"
+  },
+  "homepage": "https://github.com/wickning1/async-exec#readme"
+}
